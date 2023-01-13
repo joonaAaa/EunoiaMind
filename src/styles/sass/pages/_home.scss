@@ -1,0 +1,110 @@
+@use '../abstracts/variables';
+
+.div__home {
+    margin-left: 20%;
+    height: 100%;
+
+    &__msg {
+        display: flex;
+        margin-left: 10%;
+        margin-top: 2em;
+        background-color: variables.$color1;
+        justify-content: center;
+        width: 900px;
+        height: 260px;
+        border-radius: 40px;
+        padding: 20px;
+
+        &__title {
+            font-size: variables.$f-size-lg;
+            color: variables.$color3;
+            text-align:center;
+        }
+
+        &__subtitle {
+            font-size: variables.$f-size-md;
+            color: variables.$color4;
+        }
+
+        &__txt {
+            margin-left: 30px;
+            margin-top: 1em;
+        }
+
+        &__btn {
+            background-color: variables.$color2;
+            color: variables.$color3;
+            font-size: 20px;
+            width: 200px;
+            height: 50px;
+            border-radius: 40px;
+            border: none;
+            margin-top: 20px;
+            margin-left:30%;
+
+            &:hover {
+                background-color: variables.$color3;
+                color: variables.$color1;
+                transition: 400ms;
+            }
+        }
+
+        &__img {
+            margin-top: 1em;
+            margin-left: 40%;
+            width: fit-content;
+            height: fit-content;
+
+            img.manchita__home {
+                width: 200px;
+            }
+        }
+    }
+
+    &__week {
+        margin-top: 2em;
+
+        &__days,
+        &__emo {
+            margin: 0px;
+            padding: 0px;
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            // column-gap: 50px;
+            text-align: center;
+            color: variables.$color3;
+            font-size: 20px;
+
+        }
+
+        &__days__p {
+            font-size: variables.$f-size-md;
+            color: variables.$color4;
+        }
+
+        &__emo__p {
+            font-size: variables.$f-size-md;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;
+
+        .plant__home {
+            width: 180px;
+            margin-left: 20px;
+        }
+
+        &__muro {
+            margin-right: 20px;
+            padding: 40px;
+            background-color: variables.$color1;
+            width: 600px;
+            height: 240px;
+            border-radius: 40px;
+        }
+    }
+}
