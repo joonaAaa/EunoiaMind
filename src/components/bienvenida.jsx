@@ -7,7 +7,7 @@ class Bienvenida extends Component {
     return (
       <div className="contenedor-bienvenida">
       <section className="contenedor-titulo">
-          <h1 className="titulo-bienvenida">Bienvenid@ a EunoiaMind</h1>
+          <h1 className="bienvenida-titulo">Bienvenid@ a EunoiaMind</h1>
       </section>
       <section>
           <img className="logo-bienvenida" src={require("../assets/logo-manchita.png")}/>
