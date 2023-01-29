@@ -5,20 +5,20 @@ import '../styles/sass/styles.scss';
 class Bienvenida extends Component {
   render() {
     return (
-      <div className="container-fluid-bienvenida" id="fondo-bienvenida">
-        <div className="contenedor">
-          <h1 className="titulo-bienvenida">¡Bienvenid@ a EunoiaMind!</h1>
-        </div>
-        <div className="contenedor">
-          <img className="logo-bienvenida" src={require("../assets/logo-manchita.png")} alt="" />
-        </div>
-        <div className="contenedor contenedor-bienvenida">
-          <h2 className="subtitulo">Comencemos llenando algunos datos</h2>
-        </div>
-        <div className="contenedor contenedor-bienvenida">
-          <Link to="/pregunta"><button type="button" className="btn1-bienvenida">Comenzar</button></Link>
-        </div>
-      </div>
+      <div className="contenedor-bienvenida">
+      <section className="contenedor-titulo">
+          <h1 className="titulo-bienvenida">Bienvenid@ a EunoiaMind</h1>
+      </section>
+      <section>
+          <img className="logo-bienvenida" src={require("../assets/logo-manchita.png")}/>
+      </section>
+      <section className="contenedor-subtitulo">
+          <h2 className="subtitulo-bienvenida">Comencemos llenando algunos datos</h2>
+      </section>   
+      <section className="contenedor-btn1_bienvenida">
+          <a href="/pregunta"><button type="button" className="btn-bienvenida">Comenzar</button></a>
+      </section>
+  </div>
     );
   }
 }

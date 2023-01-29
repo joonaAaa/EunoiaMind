@@ -1,109 +1,175 @@
-@use '../abstracts/variables';
+@use "../abstracts/variables";
 
-.titulo {
-    color: variables.$color3;
-    text-align: center;
-    margin-top: 100px;
+* {
+  margin: 0;
 }
 
+.pregunta {
+  background-color: #e6fdd3;
+  height: 100vh;
+  overflow: hidden;
+  &-titulo{
+    color: #6cb18c;
+    font-size: 2.5rem;
+    font-family: Neucha;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 1rem;
+  }
 
-.div__pregunta{
-    background-color: variables.$color1;
-    width: 100vw;
-    height: 100vh;
+  &-emociones{
     position: relative;
-    overflow: hidden;
-}
-
-.div__pregunta__emociones {
-position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-wrap: wrap;
-margin-top: 100px;
-transition: all 0.5s ease-in-out;
-}
-
-.emocion {
+    top: 70px;
     display: flex;
-    width: 160px;
-    margin: 20px 15px 0px 20px;
+    justify-content: space-evenly;
 
-}
+    &-img {
+      width: 160px;
+      height: 160px;
 
-.contenedorbtn {
-    display: block;
-}
+      &-parrafo{
+        display: block;
+        opacity: 0;
+        height: 0px;
+        color: variables.$color4;
+        text-align: center;
+        font-size: 40px;
+      }
+    }
+  }
 
-._btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  &-logobtn{
     width: 100%;
-    margin-top: 60px;
-    
-}
+  position: absolute;
+  bottom: -0px;
+  overflow: hidden;
 
-.mancha {
-    width: 250px;
-    display: inline;
-    position: absolute;
-    left: -50px;
-    bottom:-68px;
-}
-
-.btn2-pregunta {
-    background-color: variables.$color2;
-    border: none;
-    padding: 7px;
-    width: 100px;
-    color: variables.$color3;
-    font-size: 24px;
-    border-radius: 40px;
-    box-shadow: 3px 3px 3px #a7e799;
-}
-
-.parrafo-pre {
-    opacity: 0;
-    height: 0px;
-    color: variables.$color4;
-    transition: all 0.5s ease-in-out;
-    text-align: center;
-    font-size: 40px;
-
-}
-
-.contenedor_emocion{
-    display: inline-block;
-}
-.animacion:hover +.parrafo-pre, .animacion.selected + .parrafo-pre{
-    opacity: 1;
-    margin-top: 20px;
-    transition: 0.5s;
-    height: 55px;
+  &-img{
+    width: 230px;
+    position: relative;
+    top: 89px;
+    right: 40px;
     overflow: hidden;
-    color: variables.$color4;
-    text-align: center;
+  }
+  
+&-btn{
+  width: 115px;
+  left: 20%;
+  top: 27px;
+}
+}
+}
+
+.pregunta-emociones-img:hover + .pregunta-emociones-img-parrafo {
+  opacity: 1;
+  position: relative;
+  top: 20px;
+  transition: 0.8s;
+  text-align: center;
+  height: 55px;
+  overflow: hidden;
 }
 
 .hvr-bounce-in {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    justify-content: center;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  justify-content: center;
 }
 
 .hvr-bounce-in:hover,
 .hvr-bounce-in:focus,
 .hvr-bounce-in:active,
 .selected {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+//! Botones de todas las pantallas
+.botones-pantallas{
+  background-color: variables.$color2;
+  border: none;
+  padding: 6px 20px;
+  color: variables.$color3;
+  font-size: 20px;
+  border-radius: 40px;
+  box-shadow: 3px 3px 3px #a7e799;
+  position: relative;
+  &:hover{
+    box-shadow: 5px 4px 4px #a7e799;
+  }
+}
+
+
+.divbtn{
+  &-button{
+    width: 165px;
+    left: 50%;
+    bottom: 100px;
+  }
+}
+
+
+.form_new{
+padding: 0;
+  &-emotion{
+    background-color:variables.$color1;
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px variables.$color4;
+    
+    &-titulo{
+      color: variables.$color3;
+    padding: 9px 0 0 0;
+    }
+
+    &-container{
+       width: 500px;
+       height: 120px;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-evenly;
+
+       &-label{
+        color: variables.$color4;
+        font-size: variables.$f-size-sm;
+       }
+
+      &-nombre{
+        margin-right: 90px;
+      }
+      &-tipo{
+        margin-right: 250px;
+      }
+
+      &-descripcion{
+        margin-right: 180px;
+      }
+
+      &-input{
+        width: 75%;
+        height: 40px;
+        border-radius: 20px;
+        margin-left: 80px;
+        border: 1px solid #a7e799 ;
+
+      }
+    }
+
+   &-btn{
+    position: relative;
+    top: 10px;
+    right: 120px;
+    width: 120px;
+    height: 40px;
+   }
+  }
 }

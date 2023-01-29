@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 const userTemple = [
@@ -32,28 +31,28 @@ function ModalNewEmotionComponent({ createUser }) {
 
     return (
         <>
-        <div className="btnRegistro" onClick={handleShow}>
-            <Button><i class="bi bi-plus-lg" variant="success" onClick={handleShow}>Agrear emocion</i></Button>
+
+        <div className="divbtn">
+        <button class="divbtn-button  botones-pantallas" variant="success" onClick={handleShow}>Agregar emocion</button>
         </div>
             <Modal show={show} onHide={handleClose} >
-            <Modal.Body className="form_registro">
-        <div className="sumbitRegistro">
+            <Modal.Body className="form_new">
+        <div className="form_new-emotion">
                     <form onSubmit={handleSubmit}>
-                    <h2>¡Genial, nueva emocion!</h2>
-                        <div className='form-group _input'>
-                            <label for="nombreEmocion" className="form-label--nombreUsu">Nombre de emocion:</label>
-                            <input type='text' className='form-control input_registro' id='nombreEmocion' value={nombreEmocion} name='nombreEmocion' onChange={handleInputChange} />
+                    <h2 className='form_new-emotion-titulo'>¡Genial, Nueva emocion!</h2>
+                        <div className='form_new-emotion-container'>
+                            <label for="nombreEmocion" className="form_new-emotion-container-nombre form_new-emotion-container-label">Nombre de la emocion:</label>
+                            <input type='text' className='form_new-emotion-container-input' id='nombreEmocion' value={nombreEmocion} name='nombreEmocion' onChange={handleInputChange} />
                         </div>
-                        <div className='form-group _input'>
-                            <label for="tipo" className="form-label--Correo">Tipo:</label>
-                            <input type='text' className='form-control input_registro' id='tipo'  value={tipo} name='tipo' onChange={handleInputChange} />
+                        <div className='form_new-emotion-container'>
+                            <label for="tipo" className="form_new-emotion-container-tipo form_new-emotion-container-label">Tipo:</label>
+                            <input type='text' className='form_new-emotion-container-input' id='tipo'  value={tipo} name='tipo' onChange={handleInputChange} />
                         </div>
-                        <div className='form-group _input'>
-                            <label for="descripcion" className="form-label" >Descripcion:</label>
-                                <input type='text' className='form-control input_registro' id='descripcion' value={descripcion} name='descripcion' onChange={handleInputChange} />
+                        <div className='form_new-emotion-container'>
+                            <label for="descripcion" className="form_new-emotion-container-descripcion form_new-emotion-container-label" >Descripcion:</label>
+                                <input type='text' className='form_new-emotion-container-input' id='descripcion' value={descripcion} name='descripcion' onChange={handleInputChange} />
                         </div>
-                        <button type='submit' onClick={handleClose} className='btn btn_submit'>Agregar</button>
-                    
+                        <button type='submit' onClick={handleClose} className='botones-pantallas form_new-emotion-btn'>Agregar</button>
                     </form>
                 </div>
                     </Modal.Body>

@@ -5,7 +5,6 @@ class NavbarIndex extends Component {
         return (
             <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
-                <img src={require("../assets/logo-manchita.png")} className="navbar__logo" alt="Logo de la aplicación" />
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -26,6 +25,7 @@ class NavbarIndex extends Component {
                             <a className="nav-link" href="#contacto">Contacto</a>
                         </li>
                     </ul>
+                    <img src={require("../assets/logo-manchita.png")} className="navbar__logo" alt="Logo de la aplicación" />
                 </div>
             </div>
         </nav>

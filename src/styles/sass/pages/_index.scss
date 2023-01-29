@@ -1,10 +1,8 @@
 @use '../abstracts/variables';
 
-/* ---------- Selectores ---------- */
 // Selector universal
 * {
     font-family: variables.$font1;
-    // border: 1px solid black;
 }
 
 // Selector del body y div padre
@@ -15,14 +13,11 @@ body {
     }
 }
 
-/* --------------------------------------------- */
-
 /* ---------- Headings ---------- */
 h1#h1-index {
     display: none;
 }
 
-/* ------------------------------- */
 
 
 // Contenedor flex de la planta colgante
@@ -32,24 +27,22 @@ h1#h1-index {
 
     // Imagen de la planta colgante
     .img__hangingPlant {
-        width: 230px;
+        width: 150px;
+        
+        // ?PARA HACER ADAPTABLE A DISPOSITIVOS MOVILES
+        min-width: 50px;
+        
         position: absolute;
-        margin-right: 40px;
-    }
-}
-
-@media (max-width: 1350px) {
-    .hidden-mobile {
-        display: none;
     }
 }
 
 /* ---------- Header ---------- */
 
 // Contenedor padre del header
+
 .header {
-    margin-top: 20px;
-    margin-left: 80px;
+    margin-top: 10px;
+    margin-left: 50px;
 
     // Contenedor del logo
     &__div__logo {

@@ -62,13 +62,17 @@ margin: 0 auto;
 }
 
 .btn-primary{
-    background-color: variables.$color1;
+    background-color: variables.$color2;
     width: 200px;
     height: 60px;
     border-radius: 40px;
     color: variables.$color3;
     font-size: variables.$f-size-sm;
     border: 0px ;
+    position: relative;
+    bottom:43px ;
+    left: 280px;
+    box-shadow:3px 3px 3px #a7e799;
 
     &:hover {
         background-color:variables.$color1;
