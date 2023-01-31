@@ -1,121 +1,74 @@
 @use '../abstracts/variables';
 
-.form_registro h2{
-    font-size: variables.$f-size-lg;
-    color: variables.$color3;
-    text-align: center;
-    margin: 60px;
-}
-.form_registro{
-    background-color: variables.$color1;
-    border-radius: 60px;
-    font-size: variables.$f-size-md;
-    color: variables.$color4;
-    width: 35vw;
-    padding: 20px;
-    margin: 50px 0px 140px 0px;
-}
 
-input.input_registro{
-    background-color: variables.$color2;
-    margin-bottom: 30px;
-    height: 75px;
-    border-radius: 70px;
-    font-size: variables.$f-size-sm;
-    padding: 20px;
-}
+.form__registro{
+    width: 1000px;
+    padding: 0;
+    margin: 0;
 
-div._input{
-    padding: 10px;
-    text-align: center;
-}
+    &-container{
+        background-color: variables.$color1;
+        width: 800px;
+        border-radius: 25px;
+        font-size: variables.$f-size-md;
+        color: variables.$color4;   
+        height: 90vh;        
 
-button.btn_submit{
-    background-color:variables.$color2;
-    font-family:variables.$font1;
-    border: none;
-    padding: 6px 20px;
-    color:variables.$color3;
-    font-size: variables.$f-size-sm;
-    border-radius: 40px;
-    display: block;
-    width: 25%;
-margin: 0 auto;
+        &-titulo{
+            color: variables.$color3;
+            padding: 15px 0 0 0;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        &-div{
+            display: flex;
+            flex-direction: column;
 
 
-&:hover{
-    background-color:variables.$color2;
-    color: variables.$color3;
-    box-shadow:3px 3px 3px #a7e799;
-}
+            &-text{
+                font-size: 26px;
+                margin-left: 85px;
+
+            }
+
+            &-input{
+                width: 75%;
+                height: 50px;
+                border-radius: 20px;
+                margin: 0 0px 15px 60px;
+                border: 1px solid #a7e799 ;
+                background-color: variables.$color2;
+                
+            }
+        }
+
+        &-btn{
+            position: relative;
+            left: 47%;
+            top: 3px;
+            height: 38px;
+        }
+    }
 }
 
-.div_btn{
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-
-.bi{
-    color: variables.$color3;
-}
 
 .btn-primary{
-    background-color: variables.$color2;
+    background-color: #C8EAC1;
     width: 200px;
-    height: 60px;
+    height: 54px !important;
     border-radius: 40px;
-    color: variables.$color3;
-    font-size: variables.$f-size-sm;
-    border: 0px ;
+    color: #6CB18C;
+    font-size: 25px;
+    border: 0px;
     position: relative;
-    bottom:43px ;
-    left: 280px;
-    box-shadow:3px 3px 3px #a7e799;
+    bottom: -5px !important;
+    left: 160px !important;
+    box-shadow: 3px 3px 3px #a7e799;
 
-    &:hover {
-        background-color:variables.$color1;
-        color: variables.$color3;
-        box-shadow:3px 3px 3px #a7e799;
+    &:hover{
+        background-color:  #C8EAC1 !important;
+        box-shadow: 5px 4px 4px #a7e799 !important;
     }
 
-
-    &:active{
-        background-color: rgb(255, 255, 255) !important;
-    }
-}
-
-.modal-content{
-    width: 800px;
-margin-left: -150px;
-background-color: transparent;
-}
-
-.form_registro{
-    width: 700px;
-    margin: 20px auto;
-}
-.sumbitRegistro{
-    width: 550px;
-    margin: 0 auto;
-}
-
-
-.form-label{
-    margin-right: 330px;
-    width: max-content;
-
-}
-
-.form-label--nombreUsu{
-    margin-right: 240px;
-}
-
-.form-label--Correo{
-    margin-right: 375px;
-}
-
-.confirme-contraseña{
-    margin-left: -220px;
 }

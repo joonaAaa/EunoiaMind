@@ -41,15 +41,15 @@ function ModalNewEmotionComponent({ createUser }) {
                     <form onSubmit={handleSubmit}>
                     <h2 className='form_new-emotion-titulo'>¡Genial, Nueva emocion!</h2>
                         <div className='form_new-emotion-container'>
-                            <label for="nombreEmocion" className="form_new-emotion-container-nombre form_new-emotion-container-label">Nombre de la emocion:</label>
+                            <label for="nombreEmocion" className="form_new-emotion-container-label">Nombre de la emocion:</label>
                             <input type='text' className='form_new-emotion-container-input' id='nombreEmocion' value={nombreEmocion} name='nombreEmocion' onChange={handleInputChange} />
                         </div>
                         <div className='form_new-emotion-container'>
-                            <label for="tipo" className="form_new-emotion-container-tipo form_new-emotion-container-label">Tipo:</label>
+                            <label for="tipo" className="form_new-emotion-container-label">Tipo:</label>
                             <input type='text' className='form_new-emotion-container-input' id='tipo'  value={tipo} name='tipo' onChange={handleInputChange} />
                         </div>
                         <div className='form_new-emotion-container'>
-                            <label for="descripcion" className="form_new-emotion-container-descripcion form_new-emotion-container-label" >Descripcion:</label>
+                            <label for="descripcion" className="form_new-emotion-container-label" >Descripcion:</label>
                                 <input type='text' className='form_new-emotion-container-input' id='descripcion' value={descripcion} name='descripcion' onChange={handleInputChange} />
                         </div>
                         <button type='submit' onClick={handleClose} className='botones-pantallas form_new-emotion-btn'>Agregar</button>

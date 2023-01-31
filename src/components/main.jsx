@@ -9,11 +9,11 @@ import '../styles/sass/styles.scss';
 class Main extends Component {
   render() {
     return (
-      <div className="container-fluid">
+      <main className="main-container">
         {/* <!-- Navbar --> */}
         <NavbarIndex />
         <div className="flex-container">
-          <img src={require("../assets/plant-hanging1.png")} className="img__hangingPlant hidden-mobile" alt="Ilustración decorativa de una planta colgante" />
+          <img src={require("../assets/plant-hanging1.png")} className="flex-container-img" alt="Planta colgante" />
         </div>
         {/* <!-- Título (oculto) --> */}
         <br />
@@ -146,7 +146,7 @@ class Main extends Component {
         <footer>
 
         </footer>
-      </div>
+      </main>
     );
   }
 }

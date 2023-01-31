@@ -11,6 +11,7 @@ class NavbarIndex extends Component {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <img src={require("../assets/logo-manchita.png")} className="navbar__logo" alt="Logo de la aplicación" />
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <a className="nav-link active" aria-current="page" href="/public/index.html">Inicio</a>
@@ -25,7 +26,6 @@ class NavbarIndex extends Component {
                             <a className="nav-link" href="#contacto">Contacto</a>
                         </li>
                     </ul>
-                    <img src={require("../assets/logo-manchita.png")} className="navbar__logo" alt="Logo de la aplicación" />
                 </div>
             </div>
         </nav>

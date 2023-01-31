@@ -1,44 +1,31 @@
 @use '../abstracts/variables';
 
-.contenedor-bienvenida{
+.bienvenida{
     background-color: #E6FDD3;
     height: 100vh;
-    font-family: Neucha;
-}
-
-.bienvenida-titulo{
+    font-family: variables.$font1;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    font-size: 48px;
-    font-weight: normal;
-    color: #6CB18C;
+
+&-titulo{
+    font-size: variables.$f-size-lg;
+    color: variables.$color3;
+    margin-top: 20px;
 }
 
-.logo-bienvenida{
+&-logo{
     width: 30%;
-    margin-left:37%  ;
+    margin-top: 20px;
+
+}
+
+&-subtitulo{
+    color: variables.$color4;
+    font-size: variables.$f-size-md;
+    margin-top: 28px;
+}
+
 }
 
 
-.subtitulo-bienvenida{
-    text-align: center;
-    color: #B17B6C;
-    font-weight: normal;
-    font-size: 30px;
-}
-
-.btn-bienvenida{
-    background-color:#C8EAC1;
-    font-family:Neucha;
-    border: none;
-    padding: 6px 20px;
-    color:#6CB18C;
-    font-size: 25px;
-    border-radius: 40px;
-    cursor: pointer;
-    margin-left: 45%;
-    box-shadow:3px 3px 3px #a7e799;
-    margin-top: 7px;
-    &:hover{
-        box-shadow:5px 4px 4px #a7e799;
-    }
-}

@@ -36,21 +36,20 @@ function ModalIngresoComponent({ findUser }) {
             <Button><i class="bi bi-plus-lg" variant="success" onClick={handleShow}>Ingresar</i></Button>
 </div>
             <Modal show={show} onHide={handleClose} >
-            <Modal.Body className="form_registro">
-        <div className="sumbitRegistro">
+            <Modal.Body className="form_ingresar">
+        <div className="form_ingresar-container">
                     <form onSubmit={handleSubmit}>
-                        
-                    <h2>¡ACCEDE CON TUS DATOS!</h2>
-                        <div className='form-group _input'>
-                            <label for="correo" className="form-label form-ingreso-corre">Correo:</label>
-                            <input type='text' className='form-control input_registro' id='correo'  value={correo} name='correo' onChange={handleInputChange} />
+                    <h2 className='form_ingresar-container-titulo'>ACCEDE CON TUS DATOS</h2>
+                        <div className='form_ingresar-container-div'>
+                            <label for="correo" className="form_ingresar-container-div-text">Correo:</label>
+                            <input type='text' className='form_ingresar-container-div-input' id='correo'  value={correo} name='correo' onChange={handleInputChange} />
                         </div>
                         <br />
-                        <div className='form-group _input'>
-                            <label for="contraseña" className="form-label" >Contraseña:</label>
-                                <input type='password' className='form-control input_registro' id='contraseña' value={contraseña} name='contraseña' onChange={handleInputChange} />
+                        <div className='form_ingresar-container-div'>
+                            <label for="contraseña" className="form_ingresar-container-div-text" >Contraseña:</label>
+                                <input type='password' className='form_ingresar-container-div-input' id='contraseña' value={contraseña} name='contraseña' onChange={handleInputChange} />
                         </div>
-                        <Link to={"/bienvenida"}><button type="button" className="btn_ingreso-aceptar">Aceptar</button></Link>
+                        <Link to={"/bienvenida"}><button type="button" className="botones-pantallas form_ingresar-container-btn">Aceptar</button></Link>
                     </form>
                 </div>
                     </Modal.Body>
