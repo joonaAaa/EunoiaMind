@@ -7,23 +7,31 @@
     &__msg {
         display: flex;
         margin-left: 10%;
-        margin-top: 2em;
+        margin-top: -2.7em !important;
         background-color: variables.$color1;
         justify-content: center;
         width: 900px;
-        height: 260px;
-        border-radius: 40px;
+        height: 240px !important;
+        border-radius:  0 0 40px 40px !important;
         padding: 20px;
 
         &__title {
             font-size: variables.$f-size-lg;
             color: variables.$color3;
-            text-align:center;
+            position: relative;
+            left: 240px;
+
+            &-title2{
+                font-size: 40px;
+                color: variables.$color3;
+                text-align:center;
+            }
         }
 
         &__subtitle {
             font-size: variables.$f-size-md;
             color: variables.$color4;
+            left: 100px;
         }
 
         &__txt {
@@ -31,7 +39,7 @@
             margin-top: 1em;
         }
 
-        &__btn {
+        &__btn{
             background-color: variables.$color2;
             color: variables.$color3;
             font-size: 20px;
@@ -41,11 +49,19 @@
             border: none;
             margin-top: 20px;
             margin-left:30%;
+            box-shadow: 3px 3px 3px #a7e799;
+
 
             &:hover {
-                background-color: variables.$color3;
-                color: variables.$color1;
-                transition: 400ms;
+                background-color: variables.$color2 !important;
+                box-shadow: 5px 4px 4px #a7e799 ;
+                color: variables.$color3 !important;
+            }
+
+
+            &-btn1{
+                position: relative;
+                left: -75px;
             }
         }
 
@@ -68,13 +84,14 @@
         &__emo {
             margin: 0px;
             padding: 0px;
-            width: 80%;
+            width: 100% !important; 
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             // column-gap: 50px;
             text-align: center;
             color: variables.$color3;
             font-size: 20px;
+            // background-color: red;
 
         }
 

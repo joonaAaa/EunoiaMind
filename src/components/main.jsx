@@ -71,7 +71,7 @@ class Main extends Component {
             </div>
 
             <div className="card">
-              <img src={require("../assets/emocion-foto.png")} className="card-img-top" alt="..." />
+              <img src={require("../assets/pregunta.png")} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h3 className="card-title">Registra tus emociones</h3>
                 <p className="card-text">

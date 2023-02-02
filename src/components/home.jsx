@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import Sidebar from '../components/sidebar';
 import { Link } from 'react-router-dom';
 import '../styles/sass/styles.scss';
@@ -14,7 +14,7 @@ const Home = () => {
             <h2 className="div__home__msg__title">¡Hola, usuario!</h2>
             <h3 className="div__home__msg__subtitle">¿Cómo te sientes?</h3>
             <Link to="/pregunta">
-            <button type="button" className="div__home__msg__btn">Registrar emoción</button></Link>
+            <button type="button" className="div__home__msg__btn div__home__msg__btn-btn1 ">Registrar emoción</button></Link>
           </div>
           <div className="div__home__msg__img">
             <img src={require("../assets/logo-manchita.png")} className="manchita__home" alt="" />
@@ -45,7 +45,7 @@ const Home = () => {
           <img src={require("../assets/plant-1.png")} className="plant__home" alt="Planta decorativa" />
 
           <div className="div__home__bottom__muro">
-            <h2 className="div__home__msg__title">¡Cuéntanos lo que quieras!</h2>
+            <h2 className="div__home__msg__title-title2">Cuéntanos lo que quieras</h2>
             <Link to="/muro">
             <button type="button" className="div__home__msg__btn">Escribe aquí</button></Link>
           </div>

@@ -1,58 +1,73 @@
-@use '../abstracts/variables';
+@use "../abstracts/variables";
 
-.planta{
-    max-width: 160px; 
-}
-.planta2{
-display: inline-block;
-}
-.Principal{
-    color: variables.$color3 ;
-    font-size:35px ;
-    display:inline-block;
-    margin-left: 150px;
-}
+.muro {
+    background-color: variables.$color1;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(4, 320px);
+  grid-template-rows: repeat(4, 150px);
+  grid-template-areas:
+    "planta text text ."
+    ". text2 text2 ."
+    ". text2 text2 ."
+    ". btn btn manchita";
 
-.text{
+  &-img {
+    grid-area: planta;
+
+        &-planta {
+          width: 150px;
+        } 
+       }
+  &-img2 {
+    grid-area: manchita;
+
+        &-mancha {
+          width: 300px;
+          position: relative;
+          top: -55px;
+          left: 85px;
+       }
+      }
+
+  &-title {
+    grid-area: text;
+    font-size: 45px;
+    color: variables.$color3;
+    margin-top: 10px;
+  }
+
+  &-text {
+    grid-area: text2;
     width: 500px;
     height: 300px;
-    margin-left: 290px;   
     border: 0px solid;
-    border-radius: 20px;
-    background-color: variables.$color1;
-    box-shadow:3px 3px 3px #a7e799;
+    border-radius: 10px;
+    // background-color: variables.$color2;
+    background-color: rgba(255, 255, 255, 0.463);
+    box-shadow: 3px 3px 3px #a7e799;
     color: variables.$color4;
     resize: none;
-    display: inline;
-}
+    padding: 5px;
+   &:focus{
+    outline: none;
 
-::placeholder{
+   }
+  }
+
+  &-container {
+    grid-area: btn;
+
+    &-btn {
+      grid-area: btn;
+      left: 130px;
+      top: 50px;
+      margin-left: 40px;
+      padding: 2px 27px 2px 27px;
+    }
+  }
+
+  ::placeholder {
     color: variables.$color4;
-}
-.buttons{
-    margin-top: 50px;
-    margin-left: 300px;
-}
-
-.buttons2{
-    margin-left: 360px;
-}
-.buttons3{
-    border: 0px solid ;
-    border-radius: 20px;
-    padding: 2px;
-    width: 80px;
-    color: variables.$color3 ;
-    background-color: variables.$color1;
-    box-shadow:3px 3px 3px #a7e799;
-}
-
-.manchitaMuro{
-    width: 30%;
-    margin-left: 1000px;
-}
-
-.manchitaMuro2{
-   position: absolute;
-   top:300px
+  }
 }

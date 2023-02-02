@@ -5,26 +5,26 @@ import '../styles/sass/styles.scss';
 const Muro = () => {
   return (
     <form action="" method="Get">
-
-      <div className="planta2">
-        <img src={require("../assets/plant-hanging1.png")} alt="planta1" className="planta" />
+      <main className='muro'>
+      <div className="muro-img">
+        <img src={require("../assets/plant-hanging1.png")} alt="planta1" className="muro-img-planta" />
       </div>
 
-      <div className="Principal">
+      <div className="muro-title">
         ¿Quieres contarnos por qué?
       </div>
-      <div>
-        <textarea className="text" placeholder="Escribe aqui lo que quieras"></textarea>
-        <div className="manchitaMuro2">
-          <img src={require("../assets/logo-manchita.png")} alt="manchamuro" className="manchitaMuro" />
+      
+        <textarea className="muro-text" placeholder="Escribe aqui lo que quieras"></textarea>
+
+        <div className="muro-img2"> 
+          <img src={require("../assets/logo-manchita.png")} alt="manchamuro" className="muro-img2-mancha" />
         </div>
+      
+      <div className="muro-container">
+        <Link to="/home"><button className="muro-container-btn botones-pantallas" type="button">Omitir</button></Link>
+        <Link to="/home"><button className="muro-container-btn botones-pantallas" type="button">Guardar</button></Link>
       </div>
-
-      <div className="buttons">
-        <button className="buttons1 buttons3" type="button">Omitir</button>
-
-        <Link to="/home"><button className="buttons2 buttons3" type="button">Guardar</button></Link>
-      </div>
+      </main>
     </form>
   );
 };
